@@ -25,3 +25,43 @@ body {
     text-wrap: balance;
   }
 }
+@keyframes stars_twinkle {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.bg-galaxy {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  background-size: 150% 150%;
+  animation: bgAnimation 15s ease infinite;
+  position: relative;
+  min-height: 100vh;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.stars {
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 150px 150px, 200px 200px;
+  animation: stars_twinkle 20s linear infinite;
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: bgAnimation 15s ease infinite;
+}
